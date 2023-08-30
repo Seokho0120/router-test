@@ -1,7 +1,13 @@
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
 
+const router = createBrowserRouter([
+  { path: '/', element: <p>Home</p>, errorElement: <p>Not Found</p> },
+  { path: '/videos', element: <p>Videos</p> },
+]);
+
 function App() {
-  return <div>라우터 테스트</div>;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
